@@ -1,7 +1,7 @@
 import numpy as np
 
 ITERATIONS = 1000
-sleep_time = 1/60
+sleep_time = 1/180
 
 BackLeg_amplitude = 2 * np.pi / 6
 BackLeg_frequency = 10
@@ -23,3 +23,5 @@ BackLeg_motorForce = 25
 FrontLeg_motorForce = 25
 
 gravity = [0, 0, -9.8]
+
+numberOfGenerations = 10
