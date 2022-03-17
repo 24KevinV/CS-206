@@ -25,3 +25,4 @@ FrontLeg_motorForce = 25
 gravity = [0, 0, -9.8]
 
 numberOfGenerations = 10
+populationSize = 10
