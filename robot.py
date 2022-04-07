@@ -1,3 +1,5 @@
+import math
+
 import constants as c
 # import numpy as np
 import os
@@ -22,18 +24,25 @@ class ROBOT:
         self.solutionID = solutionID
 
     def Act(self):
+        # pass
         for neuronName in self.nn.Get_Neuron_Names():
             if self.nn.Is_Motor_Neuron(neuronName):
                 jointName = self.nn.Get_Motor_Neurons_Joint(neuronName)
-                desiredAngle = self.nn.Get_Value_Of(neuronName) * c.motorJointRange
+                desiredAngle = self.nn.Get_Value_Of(neuronName)
                 self.motors[jointName].Set_Value(desiredAngle, self.robotId)
 
     def Get_Fitness(self):
-        stateOfLinkZero = p.getLinkState(self.robotId, 0)
-        positionOfLinkZero = stateOfLinkZero[0]
-        xCoordinateOfLinkZero = positionOfLinkZero[0]
+        # stateOfLinkZero = p.getLinkState(self.robotId, 0)
+        # positionOfLinkZero = stateOfLinkZero[0]
+        # zCoordinateOfLinkZero = positionOfLinkZero[2]
+        # for i in range(9):
+        #     print(p.getLinkState(self.robotId, i)[0])
+        basePositionAndOrientation = p.getBasePositionAndOrientation(self.robotId)
+        basePosition = basePositionAndOrientation[0]
+        zPosition = basePosition[2]
+
         f = open("tmp{}.txt".format(self.solutionID), "w")
-        f.write(str(xCoordinateOfLinkZero))
+        f.write(str(zPosition))
         f.close()
         os.rename("tmp{}.txt".format(self.solutionID),  "fitness{}.txt".format(self.solutionID))
 
