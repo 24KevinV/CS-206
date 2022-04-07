@@ -29,11 +29,26 @@ class ROBOT:
                 self.motors[jointName].Set_Value(desiredAngle, self.robotId)
 
     def Get_Fitness(self):
-        stateOfLinkZero = p.getLinkState(self.robotId, 0)
-        positionOfLinkZero = stateOfLinkZero[0]
-        xCoordinateOfLinkZero = positionOfLinkZero[0]
+        zPositions = []
+        for i in range(8):
+            zPositions.append(p.getLinkState(self.robotId, i)[0][2])
+
+        fitness = 0
+        for pos in zPositions:
+            fitness += pos
+
+        # stateOfLinkZero = p.getLinkState(self.robotId, 0)
+        # positionOfLinkZero = stateOfLinkZero[0]
+        # zCoordinateOfLinkZero = positionOfLinkZero[2]
+
+        basePositionAndOrientation = p.getBasePositionAndOrientation(self.robotId)
+        basePosition = basePositionAndOrientation[0]
+        zPosition = basePosition[2]
+
+        fitness -= zPosition * 8
+
         f = open("tmp{}.txt".format(self.solutionID), "w")
-        f.write(str(xCoordinateOfLinkZero))
+        f.write(str(fitness))
         f.close()
         os.rename("tmp{}.txt".format(self.solutionID),  "fitness{}.txt".format(self.solutionID))
 
@@ -54,5 +69,12 @@ class ROBOT:
     def Think(self):
         # self.nn.Print()
         self.nn.Update()
+
+
+
+
+
+
+
 
 
