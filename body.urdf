@@ -253,4 +253,236 @@
             </geometry>
         </collision>
     </link>
+    <joint name="Torso_BLLeg" type="revolute">
+       <parent link="Torso"/>
+       <child  link="BLLeg"/>
+       <origin rpy="0 0 0" xyz="-0.5 0 1" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="BLLeg">
+        <inertial>
+            <origin xyz="-0.5 -0.35 0" rpy="0 0 0"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.5 -0.35 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="1 0.2 0.2" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.5 -0.35 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="1 0.2 0.2" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Torso_BRLeg" type="revolute">
+       <parent link="Torso"/>
+       <child  link="BRLeg"/>
+       <origin rpy="0 0 0" xyz="-0.5 0 1" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="BRLeg">
+        <inertial>
+            <origin xyz="-0.5 0.35 0" rpy="0 0 0"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="-0.5 0.35 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="1 0.2 0.2" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="-0.5 0.35 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="1 0.2 0.2" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Torso_FLLeg" type="revolute">
+       <parent link="Torso"/>
+       <child  link="FLLeg"/>
+       <origin rpy="0 0 0" xyz="0.5 0 1" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="FLLeg">
+        <inertial>
+            <origin xyz="0.5 -0.35 0" rpy="0 0 0"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0.5 -0.35 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="1 0.2 0.2" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.5 -0.35 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="1 0.2 0.2" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="Torso_FRLeg" type="revolute">
+       <parent link="Torso"/>
+       <child  link="FRLeg"/>
+       <origin rpy="0 0 0" xyz="0.5 0 1" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="FRLeg">
+        <inertial>
+            <origin xyz="0.5 0.35 0" rpy="0 0 0"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0.5 0.35 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="1 0.2 0.2" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.5 0.35 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="1 0.2 0.2" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="BLLeg_LowerBLLeg" type="revolute">
+       <parent link="BLLeg"/>
+       <child  link="LowerBLLeg"/>
+       <origin rpy="0 0 0" xyz="-1 -0.35 0" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="LowerBLLeg">
+        <inertial>
+            <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.2 0.2 1" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.2 0.2 1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="BRLeg_LowerBRLeg" type="revolute">
+       <parent link="BRLeg"/>
+       <child  link="LowerBRLeg"/>
+       <origin rpy="0 0 0" xyz="-1 0.35 0" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="LowerBRLeg">
+        <inertial>
+            <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.2 0.2 1" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.2 0.2 1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="FLLeg_LowerFLLeg" type="revolute">
+       <parent link="FLLeg"/>
+       <child  link="LowerFLLeg"/>
+       <origin rpy="0 0 0" xyz="1 -0.35 0" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="LowerFLLeg">
+        <inertial>
+            <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.2 0.2 1" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.2 0.2 1" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="FRLeg_LowerFRLeg" type="revolute">
+       <parent link="FRLeg"/>
+       <child  link="LowerFRLeg"/>
+       <origin rpy="0 0 0" xyz="1 0.35 0" />
+       <axis xyz="0 1 0"/>
+       <limit effort="0.0" lower="-3.14159" upper="3.14159" velocity="0.0"/>
+    </joint>
+    <link name="LowerFRLeg">
+        <inertial>
+            <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+            <mass value="1" />
+            <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.2 0.2 1" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 -0.5" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.2 0.2 1" />
+            </geometry>
+        </collision>
+    </link>
 </robot>

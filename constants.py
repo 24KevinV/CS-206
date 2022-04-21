@@ -27,7 +27,7 @@ gravity = [0, 0, -9.8]
 numberOfGenerations = 10
 populationSize = 10
 
-numSensorNeurons = 9
-numMotorNeurons = 8
+numSensorNeurons = 17
+numMotorNeurons = 16
 
 motorJointRange = 0.2
