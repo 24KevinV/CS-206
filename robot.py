@@ -7,6 +7,7 @@ import pybullet as p
 from pyrosim.neuralNetwork import NEURAL_NETWORK
 import pyrosim.pyrosim as pyrosim
 from sensor import SENSOR
+import time
 
 
 class ROBOT:
@@ -15,7 +16,13 @@ class ROBOT:
         self.nn = NEURAL_NETWORK("brain{}.nndf".format(solutionID))
         os.system("del brain{}.nndf".format(solutionID))
         self.motors = None
-        self.robotId = p.loadURDF("body.urdf")
+        while True:
+            try:
+                self.robotId = p.loadURDF("body.urdf")
+                break
+            except:
+                print("waiting for loadURDF...")
+                time.sleep(0.01)
         pyrosim.Prepare_To_Simulate(self.robotId)
         self.Prepare_To_Sense()
         self.Prepare_To_Act()

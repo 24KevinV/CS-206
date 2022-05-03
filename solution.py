@@ -41,10 +41,16 @@ class SOLUTION:
     def Wait_For_Simulation_To_End(self):
         while not os.path.exists("fitness{}.txt".format(self.myID)):
             time.sleep(0.01)
-        fitnessFile = open("fitness{}.txt".format(self.myID), "r")
-        self.fitness = float(fitnessFile.read())
-        fitnessFile.close()
-        os.system("del fitness{}.txt".format(self.myID))
+        while True:
+            try:
+                fitnessFile = open("fitness{}.txt".format(self.myID), "r")
+                self.fitness = float(fitnessFile.read())
+                fitnessFile.close()
+                os.system("del fitness{}.txt".format(self.myID))
+                break
+            except Exception:
+                print("waiting for fitness{}.txt".format(self.myID))
+                time.sleep(0.01)
 
 
     def Create_World(self):

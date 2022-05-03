@@ -14,6 +14,8 @@ from pyrosim.urdf  import URDF
 
 from pyrosim.joint import JOINT
 
+import time
+
 SDF_FILETYPE  = 0
 
 URDF_FILETYPE = 1
@@ -175,7 +177,13 @@ def Start_NeuralNetwork(filename):
 
     global f
 
-    f = open(filename,"w")
+    while True:
+        try:
+            f = open(filename, "w")
+            break
+        except Exception:
+            print("waiting for nndf...")
+            time.sleep(0.01)
 
     global nndf
 
@@ -198,8 +206,14 @@ def Start_SDF(filename):
     filetype = SDF_FILETYPE
 
     global f
- 
-    f = open(filename,"w")
+
+    while True:
+        try:
+            f = open(filename, "w")
+            break
+        except Exception:
+            print("waiting for sdf...")
+            time.sleep(0.01)
 
     global sdf
 
@@ -226,8 +240,13 @@ def Start_URDF(filename):
     filetype = URDF_FILETYPE
 
     global f
-
-    f = open(filename,"w")
+    while True:
+        try:
+            f = open(filename,"w")
+            break
+        except Exception:
+            print("waiting for urdf...")
+            time.sleep(0.01)
 
     global urdf 
 

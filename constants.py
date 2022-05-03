@@ -24,10 +24,13 @@ FrontLeg_motorForce = 25
 
 gravity = [0, 0, -9.8]
 
-numberOfGenerations = 1
-populationSize = 1
+numberOfGenerations = 10
+populationChunk = 10
+numChunks = 1
+populationSize = populationChunk * numChunks
+
 
 numSensorNeurons = 17
 numMotorNeurons = 16
 
-motorJointRange = 0.2
+motorJointRange = 1
