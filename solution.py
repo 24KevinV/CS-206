@@ -109,33 +109,33 @@ class SOLUTION:
                            type="revolute", position=[1, 0, 0], jointAxis="0 1 0")
         pyrosim.Send_Cube(name="LowerRightLeg", pos=[0, 0, -0.5], size=[0.2, 0.2, 1])
 
-        # Corner Legs
-        pyrosim.Send_Joint(name="Torso_BLLeg", parent="Torso", child="BLLeg",
-                           type="revolute", position=[-0.5, 0, 1], jointAxis="0 1 0")
-        pyrosim.Send_Cube(name="BLLeg", pos=[-0.5, -0.35, 0], size=[1, 0.2, 0.2])
-        pyrosim.Send_Joint(name="Torso_BRLeg", parent="Torso", child="BRLeg",
-                           type="revolute", position=[-0.5, 0, 1], jointAxis="0 1 0")
-        pyrosim.Send_Cube(name="BRLeg", pos=[-0.5, 0.35, 0], size=[1, 0.2, 0.2])
-        pyrosim.Send_Joint(name="Torso_FLLeg", parent="Torso", child="FLLeg",
-                           type="revolute", position=[0.5, 0, 1], jointAxis="0 1 0")
-        pyrosim.Send_Cube(name="FLLeg", pos=[0.5, -0.35, 0], size=[1, 0.2, 0.2])
-        pyrosim.Send_Joint(name="Torso_FRLeg", parent="Torso", child="FRLeg",
-                           type="revolute", position=[0.5, 0, 1], jointAxis="0 1 0")
-        pyrosim.Send_Cube(name="FRLeg", pos=[0.5, 0.35, 0], size=[1, 0.2, 0.2])
-
-        # Lower Corner Legs
-        pyrosim.Send_Joint(name="BLLeg_LowerBLLeg", parent="BLLeg", child="LowerBLLeg",
-                           type="revolute", position=[-1, -0.35, 0], jointAxis="0 1 0")
-        pyrosim.Send_Cube(name="LowerBLLeg", pos=[0, 0, -0.5], size=[0.2, 0.2, 1])
-        pyrosim.Send_Joint(name="BRLeg_LowerBRLeg", parent="BRLeg", child="LowerBRLeg",
-                           type="revolute", position=[-1, 0.35, 0], jointAxis="0 1 0")
-        pyrosim.Send_Cube(name="LowerBRLeg", pos=[0, 0, -0.5], size=[0.2, 0.2, 1])
-        pyrosim.Send_Joint(name="FLLeg_LowerFLLeg", parent="FLLeg", child="LowerFLLeg",
-                           type="revolute", position=[1, -0.35, 0], jointAxis="0 1 0")
-        pyrosim.Send_Cube(name="LowerFLLeg", pos=[0, 0, -0.5], size=[0.2, 0.2, 1])
-        pyrosim.Send_Joint(name="FRLeg_LowerFRLeg", parent="FRLeg", child="LowerFRLeg",
-                           type="revolute", position=[1, 0.35, 0], jointAxis="0 1 0")
-        pyrosim.Send_Cube(name="LowerFRLeg", pos=[0, 0, -0.5], size=[0.2, 0.2, 1])
+        # # Corner Legs
+        # pyrosim.Send_Joint(name="Torso_BLLeg", parent="Torso", child="BLLeg",
+        #                    type="revolute", position=[-0.5, 0, 1], jointAxis="0 1 0")
+        # pyrosim.Send_Cube(name="BLLeg", pos=[-0.5, -0.35, 0], size=[1, 0.2, 0.2])
+        # pyrosim.Send_Joint(name="Torso_BRLeg", parent="Torso", child="BRLeg",
+        #                    type="revolute", position=[-0.5, 0, 1], jointAxis="0 1 0")
+        # pyrosim.Send_Cube(name="BRLeg", pos=[-0.5, 0.35, 0], size=[1, 0.2, 0.2])
+        # pyrosim.Send_Joint(name="Torso_FLLeg", parent="Torso", child="FLLeg",
+        #                    type="revolute", position=[0.5, 0, 1], jointAxis="0 1 0")
+        # pyrosim.Send_Cube(name="FLLeg", pos=[0.5, -0.35, 0], size=[1, 0.2, 0.2])
+        # pyrosim.Send_Joint(name="Torso_FRLeg", parent="Torso", child="FRLeg",
+        #                    type="revolute", position=[0.5, 0, 1], jointAxis="0 1 0")
+        # pyrosim.Send_Cube(name="FRLeg", pos=[0.5, 0.35, 0], size=[1, 0.2, 0.2])
+        #
+        # # Lower Corner Legs
+        # pyrosim.Send_Joint(name="BLLeg_LowerBLLeg", parent="BLLeg", child="LowerBLLeg",
+        #                    type="revolute", position=[-1, -0.35, 0], jointAxis="0 1 0")
+        # pyrosim.Send_Cube(name="LowerBLLeg", pos=[0, 0, -0.5], size=[0.2, 0.2, 1])
+        # pyrosim.Send_Joint(name="BRLeg_LowerBRLeg", parent="BRLeg", child="LowerBRLeg",
+        #                    type="revolute", position=[-1, 0.35, 0], jointAxis="0 1 0")
+        # pyrosim.Send_Cube(name="LowerBRLeg", pos=[0, 0, -0.5], size=[0.2, 0.2, 1])
+        # pyrosim.Send_Joint(name="FLLeg_LowerFLLeg", parent="FLLeg", child="LowerFLLeg",
+        #                    type="revolute", position=[1, -0.35, 0], jointAxis="0 1 0")
+        # pyrosim.Send_Cube(name="LowerFLLeg", pos=[0, 0, -0.5], size=[0.2, 0.2, 1])
+        # pyrosim.Send_Joint(name="FRLeg_LowerFRLeg", parent="FRLeg", child="LowerFRLeg",
+        #                    type="revolute", position=[1, 0.35, 0], jointAxis="0 1 0")
+        # pyrosim.Send_Cube(name="LowerFRLeg", pos=[0, 0, -0.5], size=[0.2, 0.2, 1])
 
         pyrosim.End()
 
@@ -152,32 +152,32 @@ class SOLUTION:
         pyrosim.Send_Sensor_Neuron(name=7, linkName="LowerLeftLeg")
         pyrosim.Send_Sensor_Neuron(name=8, linkName="LowerRightLeg")
 
-        pyrosim.Send_Sensor_Neuron(name=9, linkName="BLLeg")
-        pyrosim.Send_Sensor_Neuron(name=10, linkName="BRLeg")
-        pyrosim.Send_Sensor_Neuron(name=11, linkName="FLLeg")
-        pyrosim.Send_Sensor_Neuron(name=12, linkName="FRLeg")
-        pyrosim.Send_Sensor_Neuron(name=13, linkName="LowerBLLeg")
-        pyrosim.Send_Sensor_Neuron(name=14, linkName="LowerBRLeg")
-        pyrosim.Send_Sensor_Neuron(name=15, linkName="LowerFLLeg")
-        pyrosim.Send_Sensor_Neuron(name=16, linkName="LowerFRLeg")
+        # pyrosim.Send_Sensor_Neuron(name=9, linkName="BLLeg")
+        # pyrosim.Send_Sensor_Neuron(name=10, linkName="BRLeg")
+        # pyrosim.Send_Sensor_Neuron(name=11, linkName="FLLeg")
+        # pyrosim.Send_Sensor_Neuron(name=12, linkName="FRLeg")
+        # pyrosim.Send_Sensor_Neuron(name=13, linkName="LowerBLLeg")
+        # pyrosim.Send_Sensor_Neuron(name=14, linkName="LowerBRLeg")
+        # pyrosim.Send_Sensor_Neuron(name=15, linkName="LowerFLLeg")
+        # pyrosim.Send_Sensor_Neuron(name=16, linkName="LowerFRLeg")
 
-        pyrosim.Send_Motor_Neuron(name=17, jointName="Torso_BackLeg")
-        pyrosim.Send_Motor_Neuron(name=18, jointName="Torso_FrontLeg")
-        pyrosim.Send_Motor_Neuron(name=19, jointName="Torso_LeftLeg")
-        pyrosim.Send_Motor_Neuron(name=20, jointName="Torso_RightLeg")
-        pyrosim.Send_Motor_Neuron(name=21, jointName="BackLeg_LowerBackLeg")
-        pyrosim.Send_Motor_Neuron(name=22, jointName="FrontLeg_LowerFrontLeg")
-        pyrosim.Send_Motor_Neuron(name=23, jointName="LeftLeg_LowerLeftLeg")
-        pyrosim.Send_Motor_Neuron(name=24, jointName="RightLeg_LowerRightLeg")
+        pyrosim.Send_Motor_Neuron(name=9, jointName="Torso_BackLeg")
+        pyrosim.Send_Motor_Neuron(name=10, jointName="Torso_FrontLeg")
+        pyrosim.Send_Motor_Neuron(name=11, jointName="Torso_LeftLeg")
+        pyrosim.Send_Motor_Neuron(name=12, jointName="Torso_RightLeg")
+        pyrosim.Send_Motor_Neuron(name=13, jointName="BackLeg_LowerBackLeg")
+        pyrosim.Send_Motor_Neuron(name=14, jointName="FrontLeg_LowerFrontLeg")
+        pyrosim.Send_Motor_Neuron(name=15, jointName="LeftLeg_LowerLeftLeg")
+        pyrosim.Send_Motor_Neuron(name=16, jointName="RightLeg_LowerRightLeg")
 
-        pyrosim.Send_Motor_Neuron(name=25, jointName="Torso_BLLeg")
-        pyrosim.Send_Motor_Neuron(name=26, jointName="Torso_BRLeg")
-        pyrosim.Send_Motor_Neuron(name=27, jointName="Torso_FLLeg")
-        pyrosim.Send_Motor_Neuron(name=28, jointName="Torso_FRLeg")
-        pyrosim.Send_Motor_Neuron(name=29, jointName="BLLeg_LowerBLLeg")
-        pyrosim.Send_Motor_Neuron(name=30, jointName="BRLeg_LowerBRLeg")
-        pyrosim.Send_Motor_Neuron(name=31, jointName="FLLeg_LowerFLLeg")
-        pyrosim.Send_Motor_Neuron(name=32, jointName="FRLeg_LowerFRLeg")
+        # pyrosim.Send_Motor_Neuron(name=25, jointName="Torso_BLLeg")
+        # pyrosim.Send_Motor_Neuron(name=26, jointName="Torso_BRLeg")
+        # pyrosim.Send_Motor_Neuron(name=27, jointName="Torso_FLLeg")
+        # pyrosim.Send_Motor_Neuron(name=28, jointName="Torso_FRLeg")
+        # pyrosim.Send_Motor_Neuron(name=29, jointName="BLLeg_LowerBLLeg")
+        # pyrosim.Send_Motor_Neuron(name=30, jointName="BRLeg_LowerBRLeg")
+        # pyrosim.Send_Motor_Neuron(name=31, jointName="FLLeg_LowerFLLeg")
+        # pyrosim.Send_Motor_Neuron(name=32, jointName="FRLeg_LowerFRLeg")
 
         for currentRow in range(c.numSensorNeurons):
             for currentColumn in range(c.numMotorNeurons):

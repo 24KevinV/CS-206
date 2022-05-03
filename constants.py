@@ -30,7 +30,7 @@ numChunks = 1
 populationSize = populationChunk * numChunks
 
 
-numSensorNeurons = 17
-numMotorNeurons = 16
+numSensorNeurons = 9
+numMotorNeurons = 8
 
 motorJointRange = 1

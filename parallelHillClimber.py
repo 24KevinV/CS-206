@@ -1,5 +1,6 @@
 import constants as c
 import copy
+from time import time
 import os
 import solution
 
@@ -8,8 +9,8 @@ class PARALLEL_HILL_CLIMBER:
     def __init__(self):
         os.system("del brain*.nndf")
         os.system("del fitness*.txt")
-        self.datafile = open("octopod fitness.txt", "a")
-        self.datafile.write("Start of Run\n")
+        self.datafile = open("quadruped fitness{}.txt".format(time() * 1000), "w")
+        # self.datafile.write("Start of Run\n")
         self.nextAvailableID = 0
         self.parents = {}
         for i in range(c.populationSize):
@@ -35,6 +36,7 @@ class PARALLEL_HILL_CLIMBER:
         self.Evaluate(self.parents)
         for currentGeneration in range(c.numberOfGenerations):
             self.Evolve_For_One_Generation(currentGeneration)
+        self.datafile.close()
         self.Show_Best()
 
     def Evolve_For_One_Generation(self, currentGeneration):
