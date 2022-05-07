@@ -24,9 +24,9 @@ FrontLeg_motorForce = 25
 
 gravity = [0, 0, -9.8]
 
-numberOfGenerations = 10
+numberOfGenerations = 100
 populationChunk = 10
-numChunks = 1
+numChunks = 10
 populationSize = populationChunk * numChunks
 
 

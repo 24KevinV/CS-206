@@ -73,6 +73,7 @@ class PARALLEL_HILL_CLIMBER:
                 best_solution = i
         self.parents[best_solution].Start_Simulation("GUI")
         print("Best Fitness:", self.parents[best_solution].fitness)
+        self.parents[best_solution].Wait_For_Simulation_To_End()
         self.datafile.close()
 
     def Spawn(self):
